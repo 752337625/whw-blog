@@ -1,7 +1,17 @@
 <template>
   <div class="blog-tag">
+    <h1>目前共计55个标签</h1>
     <ul>
-      <li v-for="(item, index) in sj" :key="index">{{ item }}</li>
+      <li
+        v-for="(item, index) in sj"
+        :key="index"
+        :style="{
+          color: `#${(Math.random() * 10 ** 6).toFixed(0)}`,
+          fontSize: `${(13 + Math.random() * 7).toFixed(0)}px`
+        }"
+      >
+        {{ item }}
+      </li>
     </ul>
   </div>
 </template>
@@ -71,13 +81,18 @@ export default {
 
 <style scoped lang="less">
 .blog-tag {
-  width: 50%;
-  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
   ul {
     display: flex;
     flex-wrap: wrap;
     line-height: 5;
     justify-content: space-between;
+    align-items: center;
+
     li {
       padding: 0 5px;
     }

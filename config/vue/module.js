@@ -1,5 +1,5 @@
 function configModule(config) {
-  config.module.noParse = /^(vue|vue-router|vuex|vuex-router-sync)$/;
+  config.module.noParse = /^(vue|vue-router|vuex)$/;
 }
 module.exports = {
   configModule

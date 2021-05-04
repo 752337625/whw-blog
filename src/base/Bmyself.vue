@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "myself"
+  name: "Bmyself"
 };
 </script>
 

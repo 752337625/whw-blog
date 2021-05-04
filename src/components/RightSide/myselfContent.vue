@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ data }}
     <div class="blog-index-p">
       <div style="text-align-last: justify;font-weight: 600;">
         <p>网名：</p>
@@ -19,7 +20,6 @@
     <div class="me-tool">
       <span><i class="iconfont icon-QQ" style="color: #1BC1FA"></i></span>
       <span><i class="iconfont icon-wechat1" style="color: #15C434"></i></span>
-      <span><i class="iconfont icon-GitHub"></i></span>
       <span><i class="iconfont icon-email" style="color: #2F77F1"></i></span>
     </div>
   </div>
@@ -27,7 +27,13 @@
 
 <script>
 export default {
-  name: "blogContent"
+  name: "blogContent",
+  props: {
+    data: {
+      type: String,
+      default: "5999"
+    }
+  }
 };
 </script>
 
@@ -37,8 +43,9 @@ export default {
   letter-spacing: 1px;
   font-size: 16px;
   line-height: 35px;
-  justify-content: center;
+  width: 100%;
   white-space: nowrap;
+  overflow: hidden;
 }
 .me-tool {
   text-align: center;

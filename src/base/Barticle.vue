@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "article",
+  name: "Barticle",
   data() {
     return {
       cardInfo: [
